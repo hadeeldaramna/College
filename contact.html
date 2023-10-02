@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="images/logo.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#course">COURSE</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="container">
+        <form id="form" onsubmit="sendEmail()">
+          <h3>GET IN TOUCH</h3>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Email Id" required />
+          <select name="Continent">
+            <option>Africa</option>
+            <option>Asia</option>
+            <option>Australia</option>
+            <option>Europe</option>
+            <option>North America</option>
+            <option>South America</option>
+          </select>
+          <textarea id="message" placeholder="How Can We Help You?"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>
